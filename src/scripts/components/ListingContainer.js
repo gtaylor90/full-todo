@@ -16,15 +16,23 @@ var ListingContainer = React.createClass({
 		return(
 			<div className="listingContainer">
 				<ul className="">
-					<li className="listObj">
-						<div className="listCard">
-						<h3>Big Test</h3>
-						<p>some descriptive text</p>
-						</div>
-					</li>
+					<ListingObjective listingKey={this.props.} />
 				</ul>
 			</div>
 			)
+	}
+})
+
+var ListingObjective = React.createClass({
+	render: function(){
+		return(
+			{
+			this.props.listingKey.map(function(todo){
+				return <li>{todo}</li>
+				})
+		}
+			)
+		}
 	}
 })
 

@@ -31,7 +31,8 @@ var AView = React.createClass({
     	return (
     		<div>
     			<Header />
-    			<ListingContainer />
+                {/*idk how to feed db material in here?*/}
+    			<ListingContainer  />
     		</div>
     		)
     }
@@ -50,7 +51,7 @@ var Header = React.createClass({
 		console.log('rendering Header')
 		return(
 			<div class="row">
-				<h1>WOW WHAT A LIST</h1>
+				<h2>WOW WHAT A LIST</h2>
 			</div>
 			)
 	}

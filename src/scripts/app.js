@@ -16,8 +16,15 @@ const app = function() {
 			// eventually…
 			// 'lists/completed' : 'showCompletedTasks'
 			// 'lists/pending' : 'showPendingTasks'
+			'list/:user' : 'showUserLists',
 			'*anything' : 'showHomeView'
 		},
+
+		showUserLists: function(){
+			console.log('initializing show user lists')
+			ReactDOM.render(<AView  />, document.querySelector('.container'))
+		},
+
 		showHomeView: function(){
 			console.log('initiating showHomeView')
 			ReactDOM.render(<AView />,document.querySelector('.container'))
